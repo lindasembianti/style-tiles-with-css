@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Newsreader:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,11 +20,9 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #efeeea;
+  --color-4: #a1c0ba;
+  --color-5: #004700;
 
   --primary-font: "Open Sans", sans-serif;
   --secondary-font: "Droid Serif", serif;
@@ -27,15 +31,13 @@ use the fonts in other ways in the font hierarchy etc. */
   --white-space: 1rem;
 }
 
-button {
-  transition: all 3s;
-}
 a {
   transition: all 3s;
 }
+
 button:hover {
   background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  transform: scale(1);
 }
 
 button:active {
@@ -46,6 +48,7 @@ a:hover {
   color: var(--link-hover-color);
   font-size: 4rem;
 }
+
 html {
   font-size: 100%;
   font-family: var(--primary-font);
@@ -71,28 +74,34 @@ footer {
 }
 
 .header-wrapper h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 5rem;
+  font-family: "Newsreader", serif;
   letter-spacing: -2px;
   padding-right: 0.75em;
-  font-weight: bold;
-  color: white;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 0.1rem;
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+  color: black;
+  font-family: "Newsreader", serif;
   margin: var(--white-space) 0;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
-  font-style: italic;
+  font-family: "Quicksand", sans-serif;
+  color: black;
+  text-transform: uppercase;
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
 }
 
 main {
@@ -151,22 +160,6 @@ ul li:last-child {
   margin-right: 5vw;
 }
 
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
-}
-
 .images ul {
   flex-direction: column;
   text-align: center;
@@ -179,30 +172,19 @@ ul li:last-child {
 }
 
 button {
+  font-family: "Newsreader", serif;
+  letter-spacing: 0.1rem;
   padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
-  text-align: center;
+  border-radius: 0rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.1rem;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
-  letter-spacing: 1px;
-  color: white;
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
+  background-color: #efeeea;
+  text-align: center;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
-}
-
-.secondary-button {
-  background: var(--color-5);
-}
-
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 4px;
 }
 
 .typography-main {
@@ -210,18 +192,24 @@ button:focus-within {
 }
 
 .h1-sample {
-  font-size: 2.4rem;
-  font-weight: bold;
+  font-size: 5rem;
+  font-family: "Newsreader", serif;
+  padding-right: 0.75em;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 0.1rem;
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
-  font-style: italic;
-  font-size: 1.25rem;
+  font-family: "Newsreader", serif;
+  font-weight: 200;
+  font-size: 2rem;
 }
 
 p.typography-sample {
   font-family: var(--secondary-font);
+  font-family: "Quicksand", sans-serif;
   line-height: 1.5;
   max-width: 960px;
 }
@@ -237,9 +225,10 @@ em {
 a {
   font-family: var(--primary-font);
   color: var(--link-color);
-  font-weight: bold;
-  text-decoration: none;
   transition: all 0.2s;
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+  text-decoration: underline;
 }
 
 p[class*="font-details-"] {
@@ -253,6 +242,9 @@ p[class*="font-details-"] {
 .adjectives ul {
   font-size: 2rem;
   opacity: 0.5;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .adjectives ul {
